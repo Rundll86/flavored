@@ -1,5 +1,8 @@
 import { Configuration } from "webpack";
+import "webpack-dev-server";
 import { VueLoaderPlugin } from "vue-loader";
+import path from "path";
+import { FlavorType } from ".";
 
 export const ts: Configuration = {
     module: {
@@ -46,4 +49,16 @@ export const css: Configuration = {
             },
         ],
     },
+};
+export const wds: Configuration = {
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "public"),
+        },
+        compress: true,
+        setupExitSignals: false,
+        client: {
+            logging: "none"
+        }
+    }
 };

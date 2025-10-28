@@ -3,10 +3,11 @@ import * as library from "./library";
 import merge from "webpack-merge";
 import Webpackbar from "webpackbar";
 
-export type FlavorType = keyof typeof library;
+export type FlavorType = Exclude<keyof typeof library, "default">;
 export interface FlavorConfig {
     name: string;
     use?: FlavorType[];
+    options?: Record<string, any>;
     expand?: Configuration;
 }
 
@@ -18,6 +19,7 @@ export function baseConfig(name: string): Configuration {
                 color: "green"
             })
         ],
+        stats: "errors-warnings"
     }
 }
 export function flavor(config: FlavorConfig): Configuration {
@@ -25,5 +27,5 @@ export function flavor(config: FlavorConfig): Configuration {
     config.use?.forEach((type) => {
         result = merge(result, library[type]);
     });
-    return merge(result, config.expand || {});
+    return merge(result, config.expand ?? {});
 }
