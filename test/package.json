@@ -1,0 +1,12 @@
+{
+    "name": "test-fc",
+    "version": "1.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "flavored-config": "^1.0.0"
+    },
+    "scripts": {
+        "test": "node index"
+    }
+}
