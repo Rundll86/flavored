@@ -1085,9 +1085,9 @@ flat@^5.0.2:
   integrity sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==
 
 flavored-config@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/flavored-config/-/flavored-config-1.0.0.tgz#e2ea615e346176e4ad240ae6d76a3584257f8543"
-  integrity sha512-ZRE6J4ixCwzfNvvT5KmSWNxo9WzEgOwdccLMOw2zsUpG9iZqQWmrFCt8NAY2stjO6+N53wgLS7xN21SQc53W7A==
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/flavored-config/-/flavored-config-1.0.1.tgz#df3034bb005d668c7a933633ba731dc69973db44"
+  integrity sha512-G4VisfuYR27vCn042u91uv0A//OTMExyl9MIdxMVj5rRtcc03NNC3GX+9P5Ayj3ZZe/PXY7WeCscmLnRNaFW2g==
   dependencies:
     css-loader "^7.1.2"
     typescript "^5.9.3"
