@@ -3,6 +3,17 @@
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
+    "exports": {
+        ".": "./dist/index.js",
+        "./*": "./dist/*"
+    },
+    "typesVersions": {
+        "*": {
+            "*": [
+                "./dist/*"
+            ]
+        }
+    },
     "dependencies": {
         "css-loader": "^7.1.2",
         "typescript": "^5.9.3",
