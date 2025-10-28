@@ -1,8 +1,9 @@
 {
-    "name": "flavored",
+    "name": "@rundll86/flavored-config",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
+    "private": false,
     "exports": {
         ".": "./dist/index.js",
         "./*": "./dist/*"
