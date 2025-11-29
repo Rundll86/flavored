@@ -2,6 +2,7 @@ import { Configuration } from "webpack";
 import "webpack-dev-server";
 import { VueLoaderPlugin } from "vue-loader";
 import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export const ts: Configuration = {
     module: {
@@ -52,7 +53,7 @@ export const css: Configuration = {
 export const wds: Configuration = {
     devServer: {
         static: {
-            directory: path.join(__dirname, "public"),
+            directory: path.resolve("public"),
         },
         compress: true,
         setupExitSignals: false,
@@ -65,4 +66,12 @@ export const dontClean: Configuration = {
     output: {
         clean: false
     }
-}
+};
+export const html: Configuration = {
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./templates/index.html",
+            filename: "index.html"
+        }),
+    ],
+};
